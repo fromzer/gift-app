@@ -1,0 +1,252 @@
+{
+	"info": {
+		"_postman_id": "2b8b9a5f-2151-4750-8aea-7bced3e628bb",
+		"name": "certificates",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "certificates",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/gift-app/certificates",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"gift-app",
+						"certificates"
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "name,ASC",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "certificates/:id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/gift-app/certificates/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"gift-app",
+						"certificates",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "certificates?tag=",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/gift-app/certificates?tag=SportMaster&sort=create_date,ASC",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"gift-app",
+						"certificates"
+					],
+					"query": [
+						{
+							"key": "tag",
+							"value": "SportMaster"
+						},
+						{
+							"key": "sort",
+							"value": "create_date,ASC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "certificates?name=",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/gift-app/certificates?name=est",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"gift-app",
+						"certificates"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "est"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "certificates?description=",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/gift-app/certificates?description=est",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"gift-app",
+						"certificates"
+					],
+					"query": [
+						{
+							"key": "description",
+							"value": "est"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "certificates?sort=",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/gift-app/certificates?sort=create_date,DESC",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"gift-app",
+						"certificates"
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "create_date,DESC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"name\": \"info\",\r\n        \"description\": \"Hello world\",\r\n        \"price\": 3,\r\n        \"duration\":\"2\",\r\n        \"tags\": [\r\n            {\r\n                \"name\": \"one\"\r\n            }\r\n        ]\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/gift-app/certificates",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"gift-app",
+						"certificates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "certificates",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"n\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/gift-app/certificates",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"gift-app",
+						"certificates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "certificates",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"id\": 2,\r\n        \"name\": \"Help\",\r\n        \"duration\": 1\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/gift-app/certificates",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"gift-app",
+						"certificates"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
